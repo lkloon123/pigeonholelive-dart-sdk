@@ -1,0 +1,42 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Dart
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        sdk: [2.12.x, stable]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ matrix.sdk }}
+
+      - name: Install dependencies
+        run: dart pub get
+        
+      - name: Run test without coverage
+        if: ${{ matrix.sdk != 'stable' }}
+        run: dart test
+
+      - name: Run test with coverage
+        if: ${{ matrix.sdk == 'stable' }}
+        run: ./run_test.sh
+      
+      - name: Upload coverage to Codecov
+        if: ${{ matrix.sdk == 'stable' }}
+        uses: codecov/codecov-action@v1 
+        with: 
+          token: ${{ secrets.CODECOV_TOKEN }} 
+          file: coverage/lcov.info
