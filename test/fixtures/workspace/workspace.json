@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "name": "Example name",
+  "type": "personal",
+  "organisationName": "PigeonLab Pte Ltd",
+  "maxMembers": 5,
+  "createdAt": "2021-03-30T12:40:49Z",
+  "settings": {
+    "enforceAnonymity": false,
+    "SSORequired": false,
+    "themesAllowed": true,
+    "integrations": [
+      "BlueJeans",
+      "Brightcove",
+      "Kaltura"
+    ]
+  }
+}

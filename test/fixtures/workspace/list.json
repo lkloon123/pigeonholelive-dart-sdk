@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Example name",
+      "type": "personal",
+      "organisationName": "PigeonLab Pte Ltd",
+      "maxMembers": 5,
+      "createdAt": "2021-03-30T12:40:49Z"
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": "Y3Vyc29yXzk0OA==",
+    "hasMore": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": 1,
+  "parentSessionId": 2,
+  "name": "Session name",
+  "description": "Example description",
+  "location": "Example location",
+  "startDate": "2020-07-07T11:43:22+08:00",
+  "endDate": "2020-07-07T11:50:22+08:00",
+  "type": "qna",
+  "sessionLabel": "Q&A",
+  "buttonText": "Enter this Q&A",
+  "createdAt": "2020-07-06T04:18:21Z",
+  "anonymousResponses": true,
+  "questionFiltering": false,
+  "comments": true,
+  "commentFiltering": false,
+  "answers": false,
+  "answerRatings": true,
+  "questionsAvailableAfterEnd": true,
+  "adminCollaboration": true,
+  "hideOtherAttendeesQuestions": true,
+  "questionVotes": false,
+  "tagsRequired": false,
+  "logoPosition": "header",
+  "tags": "third,second,first",
+  "links": {
+    "audienceWebApp": {
+      "url": "https://pigeonhole.at/ABCDEF/s/1"
+    },
+    "projectorPanel": {
+      "accessLevel": "anyone",
+      "url": "https://pigeonhole.at/1/access/PROJECTOR-CODE/p/1"
+    },
+    "adminPanel": {
+      "accessLevel": "anyone",
+      "url": "https://pigeonhole.at/1/access/ADMIN-CODE/a/1"
+    },
+    "moderatorPanel": {
+      "accessLevel": "anyone",
+      "url": "https://pigeonhole.at/1/access/MODERATOR-CODE/m/1"
+    }
+  }
+}

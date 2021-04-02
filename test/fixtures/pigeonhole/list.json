@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "id": 31,
+      "name": "My First Event",
+      "description": "Welcome! All available sessions are shown below.",
+      "passcode": "KQWBC9",
+      "startDate": "2021-03-30",
+      "endDate": "2021-03-30",
+      "status": "live",
+      "timezone": "Asia/Singapore",
+      "attendeeProfiles": true,
+      "registrants": false,
+      "attendeeCodeRequired": false,
+      "links": {
+        "audienceWebApp": {
+          "url": "https://pigeonhole.at/ABCDEF"
+        },
+        "projectorPanel": {
+          "accessLevel": "anyone",
+          "url": "https://pigeonhole.at/access/PROJECTOR-CODE/p"
+        },
+        "adminPanel": {
+          "accessLevel": "anyone",
+          "url": "https://pigeonhole.at/access/ADMIN-CODE/a"
+        },
+        "moderatorPanel": {
+          "accessLevel": "anyone",
+          "url": "https://pigeonhole.at/access/MODERATOR-CODE/m"
+        },
+        "kiosk": {
+          "url": "https://pigeonhole.at/access/KIOSK-CODE/k"
+        }
+      }
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": "Y3Vyc29yXzk0OA==",
+    "hasMore": true
+  }
+}

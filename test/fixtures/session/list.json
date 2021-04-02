@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": 31,
+      "name": "Session name",
+      "description": "Example description",
+      "location": "Example location",
+      "startDate": "2021-03-30T12:40:49Z",
+      "endDate": "2021-03-30T12:40:49Z",
+      "createdAt": "2021-03-30T12:40:49Z",
+      "type": "qna",
+      "links": {
+        "audienceWebApp": {
+          "url": "https://pigeonhole.at/ABCDEF/s/1"
+        },
+        "projectorPanel": {
+          "accessLevel": "anyone",
+          "url": "https://pigeonhole.at/5/access/PROJECTOR-CODE/p/1"
+        },
+        "adminPanel": {
+          "accessLevel": "anyone",
+          "url": "https://pigeonhole.at/5/access/ADMIN-CODE/a/1"
+        },
+        "moderatorPanel": {
+          "accessLevel": "anyone",
+          "url": "https://pigeonhole.at/5/access/MODERATOR-CODE/m/1"
+        }
+      }
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": "Y3Vyc29yXzk0OA==",
+    "hasMore": true
+  }
+}
