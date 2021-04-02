@@ -23,4 +23,6 @@ dart run coverage:format_coverage \
 
 lcov --remove 'coverage/lcov.info' -o 'coverage/lcov.info' '**/lib/src/models/*.dart'
 
+genhtml -o coverage coverage/lcov.info
+
 rm  -f test/.test_all_with_coverage.dart
