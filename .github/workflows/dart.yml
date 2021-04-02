@@ -7,7 +7,7 @@ name: Dart
 
 on:
   push:
-    branches: [ main ]
+
   pull_request:
     branches: [ main ]
 
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        sdk: [2.12.x, stable]
+        sdk: [2.12.0, stable]
     steps:
       - uses: actions/checkout@v2
       - uses: dart-lang/setup-dart@v1
