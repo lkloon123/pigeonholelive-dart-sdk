@@ -16,7 +16,4 @@ dev_dependencies:
   json_serializable: ^4.1.0
   build_runner: ^1.12.2
   coverage: ^1.0.2
-  http_mock_adapter:
-    git:
-      url: https://github.com/kuhnroyal/http-mock-adapter
-      ref: feature/nullsafety
+  http_mock_adapter: ^0.2.1

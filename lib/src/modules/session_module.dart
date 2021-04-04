@@ -1,3 +1,4 @@
+import 'package:pigeonholelive_sdk/src/factory/live_session_factory.dart';
 import 'package:pigeonholelive_sdk/src/http/http_method.dart';
 import 'package:pigeonholelive_sdk/src/models/live_session/chat.dart';
 import 'package:pigeonholelive_sdk/src/models/live_session/live_session.dart';
@@ -67,22 +68,7 @@ class SessionImpl extends Module implements SessionModuleInterface {
 
     var paginationResult = PaginationResult<LiveSession>.fromJson(
       response.data,
-      (e) {
-        if (e is Map<String, dynamic> && e.containsKey('type')) {
-          if (e['type'] == 'qna') {
-            return Qna.fromJson(e);
-          }
-
-          if (e['type'] == 'poll_multiple_choice') {
-            return PollMultipleChoice.fromJson(e);
-          }
-
-          if (e['type'] == 'chat') {
-            return Chat.fromJson(e);
-          }
-        }
-        return LiveSession.fromJson(e);
-      },
+      LiveSessionFactory.make,
     );
 
     return PaginationHelper<LiveSession>(
@@ -111,7 +97,7 @@ class SessionImpl extends Module implements SessionModuleInterface {
       params: liveSession.toJson(),
     );
 
-    return LiveSession.fromJson(response.data);
+    return LiveSessionFactory.make(response.data);
   }
 
   @override
@@ -129,7 +115,7 @@ class SessionImpl extends Module implements SessionModuleInterface {
       uri: uri,
     );
 
-    return LiveSession.fromJson(response.data);
+    return LiveSessionFactory.make(response.data);
   }
 
   @override
@@ -148,7 +134,7 @@ class SessionImpl extends Module implements SessionModuleInterface {
       params: liveSession.toJson(),
     );
 
-    return LiveSession.fromJson(response.data);
+    return LiveSessionFactory.make(response.data);
   }
 
   @override

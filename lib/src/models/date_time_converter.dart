@@ -10,6 +10,6 @@ class DateTimeConverter implements JsonConverter<DateTime?, String?> {
 
   @override
   String? toJson(DateTime? object) {
-    return object?.toString();
+    return object?.toIso8601String();
   }
 }

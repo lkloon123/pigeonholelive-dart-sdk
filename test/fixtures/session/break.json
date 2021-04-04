@@ -1,0 +1,10 @@
+{
+  "id": 39,
+  "name": "Break session",
+  "description": "Example description",
+  "location": "Example location",
+  "startDate": "2021-03-30T12:40:49Z",
+  "endDate": "2021-03-30T12:40:49Z",
+  "createdAt": "2021-03-30T12:40:49Z",
+  "type": "break"
+}

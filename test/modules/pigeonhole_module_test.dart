@@ -90,6 +90,29 @@ void main() {
           throwsA(TypeMatcher<NoNextPageException>()),
         );
       });
+
+      test('list with filter', () async {
+        var token = WorkspaceToken(token: 'xxx');
+        var pigeonholeLive = TestingUtils.pigeonholeLive(token, dioAdapter);
+        var filter = PigeonholeFilter(id: [1]);
+
+        dioAdapter.onGet(
+          '/pigeonholes',
+          TestingUtils.mockResponse(200, 'pigeonhole/list.json'),
+          queryParameters: filter.build(),
+          headers: TestingUtils.getTestHeaders(token),
+        );
+
+        var pigeonholes = await pigeonholeLive.pigeonhole.list(
+          filter: filter,
+        );
+        expect(pigeonholes.data?.first.passcode, equalsIgnoringCase('KQWBC9'));
+
+        pigeonholes = await pigeonholeLive.pigeonhole.list(
+          filter: filter.build(),
+        );
+        expect(pigeonholes.data?.first.passcode, equalsIgnoringCase('KQWBC9'));
+      });
     });
 
     group('create', () {

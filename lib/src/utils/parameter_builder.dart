@@ -23,22 +23,14 @@ class ParameterBuilder {
   }
 
   ParameterBuilder addFiltersToParams({required dynamic? filter}) {
-    if (filter == null) {
-      return this;
-    }
+    if (filter != null) {
+      if (filter is Filter) {
+        _parameters?.addAll(filter.build());
+      }
 
-    if (filter is! Filter && filter is! Map<String, String>) {
-      throw Exception(
-        'filter should be instance of Filter or Map<String, String>',
-      );
-    }
-
-    if (filter is Filter) {
-      _parameters?.addAll(filter.build());
-    }
-
-    if (filter is Map<String, String>) {
-      _parameters?.addAll(filter);
+      if (filter is Map<String, String>) {
+        _parameters?.addAll(filter);
+      }
     }
 
     return this;

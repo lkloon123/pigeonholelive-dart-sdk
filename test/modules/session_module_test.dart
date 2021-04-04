@@ -223,6 +223,69 @@ void main() {
           )),
         );
       });
+
+      test('should return chat live session', () async {
+        var token = WorkspaceToken(token: 'xxx');
+        var pigeonholeLive = TestingUtils.pigeonholeLive(token, dioAdapter);
+
+        dioAdapter.onGet(
+          '/pigeonholes/1/sessions/1',
+          TestingUtils.mockResponse(200, 'session/chat.json'),
+          headers: TestingUtils.getTestHeaders(token),
+        );
+
+        var session = await pigeonholeLive.session.inspect(
+          pigeonholeId: 1,
+          sessionId: 1,
+        );
+
+        expect(session, isA<Chat>());
+        expect(session.name, equalsIgnoringCase('Chat session'));
+      });
+
+      test('should return Poll Multiple Choice live session', () async {
+        var token = WorkspaceToken(token: 'xxx');
+        var pigeonholeLive = TestingUtils.pigeonholeLive(token, dioAdapter);
+
+        dioAdapter.onGet(
+          '/pigeonholes/1/sessions/1',
+          TestingUtils.mockResponse(200, 'session/poll_multiple_choice.json'),
+          headers: TestingUtils.getTestHeaders(token),
+        );
+
+        var session = await pigeonholeLive.session.inspect(
+          pigeonholeId: 1,
+          sessionId: 1,
+        );
+
+        expect(session, isA<PollMultipleChoice>());
+        expect(
+          session.name,
+          equalsIgnoringCase('Poll Multiple Choice session'),
+        );
+      });
+
+      test('should return live session for break', () async {
+        var token = WorkspaceToken(token: 'xxx');
+        var pigeonholeLive = TestingUtils.pigeonholeLive(token, dioAdapter);
+
+        dioAdapter.onGet(
+          '/pigeonholes/1/sessions/1',
+          TestingUtils.mockResponse(200, 'session/break.json'),
+          headers: TestingUtils.getTestHeaders(token),
+        );
+
+        var session = await pigeonholeLive.session.inspect(
+          pigeonholeId: 1,
+          sessionId: 1,
+        );
+
+        expect(session, isA<LiveSession>());
+        expect(
+          session.name,
+          equalsIgnoringCase('Break session'),
+        );
+      });
     });
 
     group('update', () {
