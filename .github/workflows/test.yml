@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Dart
+name: Test
 
 on:
   push:
@@ -39,4 +39,5 @@ jobs:
         uses: codecov/codecov-action@v1 
         with: 
           token: ${{ secrets.CODECOV_TOKEN }} 
-          file: coverage/lcov.info
+          file: ./lcov.info
+          directory: ./coverage
