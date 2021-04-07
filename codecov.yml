@@ -1,2 +1,3 @@
 ignore:
   - "lib/src/models/**/*.dart"
+  - "lib/src/models/*.dart"
