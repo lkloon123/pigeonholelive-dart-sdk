@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "attendeeCode": "ABC12",
+      "signInTime": "2021-04-04T18:10:22Z",
+      "consent": {
+        "obtained": true,
+        "obtainedAt": "2021-04-04T18:10:22Z"
+      },
+      "linkedIn": {
+        "url": "https://linkedin.com/in/foobar",
+        "firstName": "Foo",
+        "lastName": "Bar",
+        "profileImageUrl": "https://www.linkedin.com/in/foobar"
+      },
+      "twitter": {
+        "screenName": "FooBar",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1234/image.jpg"
+      },
+      "property3": "name",
+      "property4": "title"
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": null,
+    "hasMore": false
+  }
+}

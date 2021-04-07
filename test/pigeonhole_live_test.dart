@@ -81,5 +81,52 @@ void main() {
         fail(e.toString());
       }
     });
+
+    test('able to pass custom config', () async {
+      String? testingOnly;
+      var dioAdapter = DioAdapter();
+      var token = WorkspaceToken(token: 'xxx');
+
+      var pigeonholeLive = PigeonholeLive(
+        auth: token,
+        config: Config(perPage: 10),
+        serviceProviders: [
+          ServiceProviderWrapper(setupFunc: (getIt) {
+            getIt.registerSingleton<List<Interceptor>>(
+              [
+                InterceptorsWrapper(onRequest: (options, handler) {
+                  testingOnly = 'testing only';
+                  return handler.next(options);
+                }),
+              ],
+              instanceName: 'additionalInterceptors',
+            );
+          }),
+          ServiceProviderWrapper(setupFunc: (getIt) {
+            getIt.registerSingleton<HttpClientAdapter>(
+              dioAdapter,
+              instanceName: 'customHttpClientAdapter',
+            );
+          }),
+        ],
+      );
+
+      dioAdapter.onGet(
+        '/pigeonholes',
+        TestingUtils.mockResponse(200, 'pigeonhole/list.json'),
+        queryParameters: {'count': 10},
+        headers: TestingUtils.getTestHeaders(token),
+      );
+
+      expect(testingOnly, isNull);
+
+      try {
+        await pigeonholeLive.pigeonhole.list();
+
+        expect(testingOnly, equals('testing only'));
+      } catch (e) {
+        fail(e.toString());
+      }
+    });
   });
 }

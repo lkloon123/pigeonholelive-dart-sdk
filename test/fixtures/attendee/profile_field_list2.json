@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "name": "name",
+      "required": true,
+      "type": "opentext",
+      "order": 2
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": null,
+    "hasMore": false
+  }
+}

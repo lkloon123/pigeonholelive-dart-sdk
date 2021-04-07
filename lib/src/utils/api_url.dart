@@ -3,6 +3,13 @@ import 'package:pigeonholelive_sdk/src/service_provider/service_provider_manager
 import 'package:pigeonholelive_sdk/src/utils/enum_helper.dart';
 
 enum ApiUrlKey {
+  LIST_ATTENDEE,
+  BULK_UPDATE_ATTENDEE,
+  LIST_PROFILE_FIELD,
+  CREATE_PROFILE_FIELD,
+  BULK_CREATE_PROFILE_FIELD,
+  DELETE_PROFILE_FIELD,
+
   LIST_PIGEONHOLE,
   CREATE_PIGEONHOLE,
   INSPECT_PIGEONHOLE,
@@ -50,6 +57,13 @@ class ApiUrl {
 
 class _WorkspaceApiUrl {
   static Map<String, String> urls = {
+    'LIST_ATTENDEE': 'pigeonholes/:pigeonholeId/attendees',
+    'BULK_UPDATE_ATTENDEE': 'pigeonholes/:pigeonholeId/attendees/bulk',
+    'LIST_PROFILE_FIELD': 'pigeonholes/:pigeonholeId/profile-fields',
+    'CREATE_PROFILE_FIELD': 'pigeonholes/:pigeonholeId/profile-fields',
+    'BULK_CREATE_PROFILE_FIELD': 'pigeonholes/:pigeonholeId/profile-fields/bulk',
+    'DELETE_PROFILE_FIELD': 'pigeonholes/:pigeonholeId/profile-fields/:fieldName',
+
     'LIST_PIGEONHOLE': 'pigeonholes',
     'CREATE_PIGEONHOLE': 'pigeonholes',
     'INSPECT_PIGEONHOLE': 'pigeonholes/:pigeonholeId',
@@ -79,6 +93,13 @@ class _WorkspaceApiUrl {
 
 class _OAuthApiUrl {
   static Map<String, String> urls = {
+    'LIST_ATTENDEE': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/attendees',
+    'BULK_UPDATE_ATTENDEE': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/attendees/bulk',
+    'LIST_PROFILE_FIELD': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/profile-fields',
+    'CREATE_PROFILE_FIELD': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/profile-fields',
+    'BULK_CREATE_PROFILE_FIELD': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/profile-fields/bulk',
+    'DELETE_PROFILE_FIELD': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/profile-fields/:fieldName',
+
     'LIST_PIGEONHOLE': 'workspaces/:workspaceId/pigeonholes',
     'CREATE_PIGEONHOLE': 'workspaces/:workspaceId/pigeonholes',
     'INSPECT_PIGEONHOLE': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId',

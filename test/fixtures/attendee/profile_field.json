@@ -1,0 +1,6 @@
+{
+  "name": "Organization",
+  "required": true,
+  "type": "opentext",
+  "order": 1
+}
