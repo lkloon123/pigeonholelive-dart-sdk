@@ -36,7 +36,11 @@ class SessionFilter implements Filter {
     }
 
     if (startsBetween != null) {
-      filters['filter[startsBetween]'] = startsBetween!.join(',');
+      filters['filter[startsBetween]'] = startsBetween!
+          .map(
+            (e) => e.toIso8601String(),
+          )
+          .join(',');
     }
 
     if (endsBefore != null) {
@@ -48,7 +52,11 @@ class SessionFilter implements Filter {
     }
 
     if (endsBetween != null) {
-      filters['filter[endsBetween]'] = endsBetween!.join(',');
+      filters['filter[endsBetween]'] = endsBetween!
+          .map(
+            (e) => e.toIso8601String(),
+          )
+          .join(',');
     }
 
     return filters;

@@ -18,7 +18,7 @@ class OneTimeLinkFilter implements Filter {
     }
 
     if (used != null) {
-      filters['filter[used]'] = used.toString();
+      filters['filter[used]'] = used;
     }
 
     return filters;
