@@ -40,7 +40,7 @@ class WorkspaceImpl extends Module implements WorkspaceModuleInterface {
       (data) => Workspace.fromJson(data),
     );
 
-    return PaginationHelper<Workspace>(
+    return PaginationHelper<PaginationResult<Workspace>>(
       paginationResult: paginationResult,
     ).setNextPage(() {
       return list(paginationMeta: paginationResult.paginationMeta);

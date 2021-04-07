@@ -46,7 +46,7 @@ class PigeonholeImpl extends Module implements PigeonholeModuleInterface {
       (data) => Pigeonhole.fromJson(data),
     );
 
-    return PaginationHelper<Pigeonhole>(
+    return PaginationHelper<PaginationResult<Pigeonhole>>(
       paginationResult: paginationResult,
     ).setNextPage(() {
       return list(

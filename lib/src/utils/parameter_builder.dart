@@ -28,7 +28,7 @@ class ParameterBuilder {
         _parameters?.addAll(filter.build());
       }
 
-      if (filter is Map<String, String>) {
+      if (filter is Map<String, dynamic>) {
         _parameters?.addAll(filter);
       }
     }

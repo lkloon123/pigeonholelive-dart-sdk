@@ -55,7 +55,7 @@ class SpeakerImpl extends Module implements SpeakerModuleInterface {
       (data) => Speaker.fromJson(data),
     );
 
-    return PaginationHelper<Speaker>(
+    return PaginationHelper<PaginationResult<Speaker>>(
       paginationResult: paginationResult,
     ).setNextPage(() {
       return list(

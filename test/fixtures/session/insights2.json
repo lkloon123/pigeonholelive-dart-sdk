@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "questionId": 2,
+      "content": "question 2?",
+      "options": [
+        {
+          "id": 1,
+          "content": "Yes",
+          "votes": 5,
+          "percentage": 70.3,
+          "correct": true
+        },
+        {
+          "id": 1,
+          "content": "Yes",
+          "votes": 5,
+          "percentage": 70.3,
+          "correct": true
+        }
+      ]
+    }
+  ],
+  "session": {
+    "id": 1,
+    "name": "My first session"
+  },
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": null,
+    "hasMore": false
+  }
+}

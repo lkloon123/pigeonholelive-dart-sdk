@@ -6,7 +6,7 @@ import '../testing_utils.dart';
 
 void main() {
   group('test Workspace Module', () {
-    var dioAdapter = DioAdapter();
+    late var dioAdapter;
 
     setUpAll(() {
       dioAdapter = DioAdapter();

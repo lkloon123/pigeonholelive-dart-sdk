@@ -20,8 +20,8 @@ class SessionFilter implements Filter {
   });
 
   @override
-  Map<String, String> build() {
-    var filters = <String, String>{};
+  Map<String, dynamic> build() {
+    var filters = <String, dynamic>{};
 
     if (id != null) {
       filters['filter[id]'] = id!.join(',');

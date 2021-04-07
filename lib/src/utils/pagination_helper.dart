@@ -1,12 +1,12 @@
 import 'package:pigeonholelive_sdk/src/exceptions/no_next_page_exception.dart';
 import 'package:pigeonholelive_sdk/src/models/pagination/pagination_result.dart';
 
-class PaginationHelper<T> {
-  PaginationResult<T> paginationResult;
+class PaginationHelper<T extends PaginationResult> {
+  T paginationResult;
 
   PaginationHelper({required this.paginationResult});
 
-  PaginationResult<T> setNextPage(NextPageCallback<T> callback) {
+  T setNextPage(NextPageCallback<T> callback) {
     if (paginationResult.paginationMeta?.hasMore ?? false) {
       paginationResult.nextPage = callback;
     } else {

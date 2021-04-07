@@ -1,29 +1,26 @@
 import 'dart:convert';
 import 'package:pigeonholelive_sdk/pigeonholelive_sdk.dart';
-import 'package:pigeonholelive_sdk/src/exceptions/no_next_page_exception.dart';
 import 'package:pigeonholelive_sdk/src/models/castable_to_json.dart';
 import 'package:pigeonholelive_sdk/src/models/pagination/pagination_link.dart';
 import 'package:pigeonholelive_sdk/src/models/pagination/pagination_meta.dart';
 
-typedef NextPageCallback<T extends PaginationResult> = Future<T> Function();
-typedef FromJsonCallback<T> = T Function(Map<String, dynamic>);
-
 // cannot use json serializable as it does not support generic types
-class PaginationResult<T> implements CastableToJson {
-  List<T>? data;
-  PaginationLink? paginationLink;
-  PaginationMeta? paginationMeta;
-  NextPageCallback<PaginationResult<T>> nextPage = () {
-    throw NoNextPageException();
-  };
+class InsightPaginationResult<T> extends PaginationResult<T>
+    implements CastableToJson {
+  LiveSession? liveSession;
 
-  PaginationResult({
-    this.data,
-    this.paginationLink,
-    this.paginationMeta,
-  });
+  InsightPaginationResult({
+    List<T>? data,
+    PaginationLink? paginationLink,
+    PaginationMeta? paginationMeta,
+    this.liveSession,
+  }) : super(
+          data: data,
+          paginationLink: paginationLink,
+          paginationMeta: paginationMeta,
+        );
 
-  factory PaginationResult.fromJson(
+  factory InsightPaginationResult.fromJson(
     Map<String, dynamic> json, [
     FromJsonCallback<T>? dataFromJson,
   ]) {
@@ -40,7 +37,7 @@ class PaginationResult<T> implements CastableToJson {
       }
     }
 
-    return PaginationResult<T>(
+    return InsightPaginationResult<T>(
       data: data,
       paginationLink: json['links'] == null
           ? null
@@ -48,12 +45,15 @@ class PaginationResult<T> implements CastableToJson {
       paginationMeta: json['meta'] == null
           ? null
           : PaginationMeta.fromJson(json['meta'] as Map<String, dynamic>),
+      liveSession: json['session'] == null
+          ? null
+          : LiveSession.fromJson(json['session'] as Map<String, dynamic>),
     );
   }
 
   @override
   Map<String, dynamic> toJson() {
-    final val = <String, dynamic>{};
+    final val = super.toJson();
 
     void writeNotNull(String key, dynamic value) {
       if (value != null) {
@@ -61,12 +61,7 @@ class PaginationResult<T> implements CastableToJson {
       }
     }
 
-    writeNotNull(
-      'data',
-      data?.map((dynamic e) => e is CastableToJson ? e.toJson() : e).toList(),
-    );
-    writeNotNull('links', paginationLink?.toJson());
-    writeNotNull('meta', paginationMeta?.toJson());
+    writeNotNull('session', liveSession?.toJson());
     return val;
   }
 

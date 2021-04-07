@@ -1,3 +1,3 @@
 abstract class Filter {
-  Map<String, String> build();
+  Map<String, dynamic> build();
 }
