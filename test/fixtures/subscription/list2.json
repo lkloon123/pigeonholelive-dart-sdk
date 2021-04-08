@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "name": "Subscription name 2",
+      "startDate": "2021-04-04T18:10:24Z",
+      "endDate": "2021-04-04T18:10:24Z",
+      "timezone": "Asia/Singapore"
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": null,
+    "hasMore": false
+  }
+}

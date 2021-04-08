@@ -5,6 +5,7 @@ import 'package:pigeonholelive_sdk/src/modules/custom_branding_module.dart';
 import 'package:pigeonholelive_sdk/src/modules/pigeonhole_module.dart';
 import 'package:pigeonholelive_sdk/src/modules/session_module.dart';
 import 'package:pigeonholelive_sdk/src/modules/speaker_module.dart';
+import 'package:pigeonholelive_sdk/src/modules/subscription_module.dart';
 import 'package:pigeonholelive_sdk/src/modules/workspace_module.dart';
 import 'package:pigeonholelive_sdk/src/service_provider/internal_service_provider.dart';
 import 'package:pigeonholelive_sdk/src/service_provider/service_provider_interface.dart';
@@ -42,6 +43,8 @@ class PigeonholeLive {
   SessionModuleInterface get session => SessionImpl();
 
   SpeakerModuleInterface get speaker => SpeakerImpl();
+
+  SubscriptionModuleInterface get subscription => SubscriptionImpl();
 
   WorkspaceModuleInterface get workspace => WorkspaceImpl();
 }

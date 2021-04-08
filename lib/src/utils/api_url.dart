@@ -37,6 +37,9 @@ enum ApiUrlKey {
   CREATE_SPEAKER,
   UPDATE_SPEAKER,
 
+  LIST_SUBSCRIPTION,
+  INSPECT_SUBSCRIPTION,
+
   LIST_WORKSPACE,
   INSPECT_WORKSPACE,
 }
@@ -92,6 +95,9 @@ class _WorkspaceApiUrl {
     'LIST_SPEAKER': 'pigeonholes/:pigeonholeId/speakers',
     'CREATE_SPEAKER': 'pigeonholes/:pigeonholeId/speakers',
     'UPDATE_SPEAKER': 'pigeonholes/:pigeonholeId/speakers/:speakerId/update',
+
+    'LIST_SUBSCRIPTION': 'subscriptions',
+    'INSPECT_SUBSCRIPTION': 'subscriptions/:subscriptionId',
   };
 }
 
@@ -130,6 +136,9 @@ class _OAuthApiUrl {
     'LIST_SPEAKER': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/speakers',
     'CREATE_SPEAKER': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/speakers',
     'UPDATE_SPEAKER': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/speakers/:speakerId/update',
+
+    'LIST_SUBSCRIPTION': 'workspaces/:workspaceId/subscriptions',
+    'INSPECT_SUBSCRIPTION': 'workspaces/:workspaceId/subscriptions/:subscriptionId',
 
     'LIST_WORKSPACE': 'workspaces',
     'INSPECT_WORKSPACE': 'workspaces/:workspaceId',

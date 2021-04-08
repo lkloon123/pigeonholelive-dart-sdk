@@ -20,6 +20,7 @@ export 'src/exceptions/unauthorized_exception.dart';
 export 'src/exceptions/validation_exception.dart';
 
 // filters
+export 'src/filters/attendee_filter.dart';
 export 'src/filters/filter.dart';
 export 'src/filters/one_time_link_filter.dart';
 export 'src/filters/pigeonhole_filter.dart';
@@ -39,6 +40,7 @@ export 'src/models/attendee/attendee.dart';
 export 'src/models/attendee/consent.dart';
 export 'src/models/attendee/linked_in.dart';
 export 'src/models/attendee/twitter.dart';
+export 'src/models/branding/branding.dart';
 export 'src/models/enums/live_session_type.dart';
 export 'src/models/enums/pigeonhole_status.dart';
 export 'src/models/enums/pigeonhole_link_access_level.dart';
@@ -69,5 +71,6 @@ export 'src/models/pigeonhole/pigeonhole.dart';
 export 'src/models/pigeonhole/pigeonhole_link.dart';
 export 'src/models/pigeonhole/pigeonhole_links.dart';
 export 'src/models/speaker/speaker.dart';
+export 'src/models/subscription/subscription.dart';
 export 'src/models/workspace/workspace.dart';
 export 'src/models/custom_profile_field.dart';
