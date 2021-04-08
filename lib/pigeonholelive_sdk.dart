@@ -24,6 +24,7 @@ export 'src/filters/attendee_filter.dart';
 export 'src/filters/filter.dart';
 export 'src/filters/one_time_link_filter.dart';
 export 'src/filters/pigeonhole_filter.dart';
+export 'src/filters/registrant_filter.dart';
 export 'src/filters/session_filter.dart';
 export 'src/filters/speaker_filter.dart';
 
@@ -70,6 +71,8 @@ export 'src/models/pagination/pagination_result.dart';
 export 'src/models/pigeonhole/pigeonhole.dart';
 export 'src/models/pigeonhole/pigeonhole_link.dart';
 export 'src/models/pigeonhole/pigeonhole_links.dart';
+export 'src/models/registrant/forms/registrant_form.dart';
+export 'src/models/registrant/registrant.dart';
 export 'src/models/speaker/speaker.dart';
 export 'src/models/subscription/subscription.dart';
 export 'src/models/workspace/workspace.dart';

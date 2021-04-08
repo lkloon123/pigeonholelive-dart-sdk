@@ -3,6 +3,7 @@ import 'package:pigeonholelive_sdk/src/config.dart';
 import 'package:pigeonholelive_sdk/src/modules/attendee_module.dart';
 import 'package:pigeonholelive_sdk/src/modules/custom_branding_module.dart';
 import 'package:pigeonholelive_sdk/src/modules/pigeonhole_module.dart';
+import 'package:pigeonholelive_sdk/src/modules/registrant_module.dart';
 import 'package:pigeonholelive_sdk/src/modules/session_module.dart';
 import 'package:pigeonholelive_sdk/src/modules/speaker_module.dart';
 import 'package:pigeonholelive_sdk/src/modules/subscription_module.dart';
@@ -39,6 +40,8 @@ class PigeonholeLive {
   CustomBrandingModuleInterface get customBranding => CustomBrandingImpl();
 
   PigeonholeModuleInterface get pigeonhole => PigeonholeImpl();
+
+  RegistrantModuleInterface get registrant => RegistrantImpl();
 
   SessionModuleInterface get session => SessionImpl();
 

@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "attendeeCode": "ABC12",
+  "Name": "Foo Bar",
+  "Email": "user@example.com",
+  "Company": "Pigeonlab Pte Ltd",
+  "Industry": "Tech",
+  "Position": "Team Lead"
+}

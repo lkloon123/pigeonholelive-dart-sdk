@@ -17,6 +17,12 @@ enum ApiUrlKey {
   INSPECT_PIGEONHOLE,
   UPDATE_PIGEONHOLE,
 
+  LIST_REGISTRANT,
+  CREATE_REGISTRANT,
+  UPDATE_REGISTRANT,
+  DELETE_REGISTRANT,
+  BULK_UPDATE_REGISTRANT,
+
   LIST_SESSION,
   CREATE_SESSION,
   INSPECT_SESSION,
@@ -76,6 +82,12 @@ class _WorkspaceApiUrl {
     'INSPECT_PIGEONHOLE': 'pigeonholes/:pigeonholeId',
     'UPDATE_PIGEONHOLE': 'pigeonholes/:pigeonholeId/update',
 
+    'LIST_REGISTRANT': 'pigeonholes/:pigeonholeId/registrants',
+    'CREATE_REGISTRANT': 'pigeonholes/:pigeonholeId/registrants',
+    'UPDATE_REGISTRANT': 'pigeonholes/:pigeonholeId/registrants/:registrantId/update',
+    'DELETE_REGISTRANT': 'pigeonholes/:pigeonholeId/registrants/:registrantId',
+    'BULK_UPDATE_REGISTRANT': 'pigeonholes/:pigeonholeId/registrants/bulk',
+
     'LIST_SESSION': 'pigeonholes/:pigeonholeId/sessions',
     'CREATE_SESSION': 'pigeonholes/:pigeonholeId/sessions',
     'INSPECT_SESSION': 'pigeonholes/:pigeonholeId/sessions/:sessionId',
@@ -116,6 +128,12 @@ class _OAuthApiUrl {
     'CREATE_PIGEONHOLE': 'workspaces/:workspaceId/pigeonholes',
     'INSPECT_PIGEONHOLE': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId',
     'UPDATE_PIGEONHOLE': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/update',
+
+    'LIST_REGISTRANT': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/registrants',
+    'CREATE_REGISTRANT': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/registrants',
+    'UPDATE_REGISTRANT': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/registrants/:registrantId/update',
+    'DELETE_REGISTRANT': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/registrants/:registrantId',
+    'BULK_UPDATE_REGISTRANT': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/registrants/bulk',
 
     'LIST_SESSION': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/sessions',
     'CREATE_SESSION': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/sessions',

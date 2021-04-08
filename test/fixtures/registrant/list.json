@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attendeeCode": "ABC12",
+      "signedIn": true,
+      "property1": "string",
+      "property2": "string"
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": "Y3Vyc29yXzk0OA==",
+    "hasMore": true
+  }
+}
