@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "ACME seasonal theme",
+      "customUrl": "acme-url"
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": "Y3Vyc29yXzk0OA==",
+    "hasMore": true
+  }
+}

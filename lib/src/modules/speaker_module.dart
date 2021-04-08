@@ -61,6 +61,7 @@ class SpeakerImpl extends Module implements SpeakerModuleInterface {
       return list(
         pigeonholeId: pigeonholeId,
         workspaceId: workspaceId,
+        filter: filter,
         paginationMeta: paginationResult.paginationMeta,
       );
     });

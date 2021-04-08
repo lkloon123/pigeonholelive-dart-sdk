@@ -10,6 +10,8 @@ enum ApiUrlKey {
   BULK_CREATE_PROFILE_FIELD,
   DELETE_PROFILE_FIELD,
 
+  LIST_CUSTOM_BRANDING,
+
   LIST_PIGEONHOLE,
   CREATE_PIGEONHOLE,
   INSPECT_PIGEONHOLE,
@@ -64,6 +66,8 @@ class _WorkspaceApiUrl {
     'BULK_CREATE_PROFILE_FIELD': 'pigeonholes/:pigeonholeId/profile-fields/bulk',
     'DELETE_PROFILE_FIELD': 'pigeonholes/:pigeonholeId/profile-fields/:fieldName',
 
+    'LIST_CUSTOM_BRANDING': 'custom-brandings',
+
     'LIST_PIGEONHOLE': 'pigeonholes',
     'CREATE_PIGEONHOLE': 'pigeonholes',
     'INSPECT_PIGEONHOLE': 'pigeonholes/:pigeonholeId',
@@ -99,6 +103,8 @@ class _OAuthApiUrl {
     'CREATE_PROFILE_FIELD': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/profile-fields',
     'BULK_CREATE_PROFILE_FIELD': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/profile-fields/bulk',
     'DELETE_PROFILE_FIELD': 'workspaces/:workspaceId/pigeonholes/:pigeonholeId/profile-fields/:fieldName',
+
+    'LIST_CUSTOM_BRANDING': 'workspaces/:workspaceId/custom-brandings',
 
     'LIST_PIGEONHOLE': 'workspaces/:workspaceId/pigeonholes',
     'CREATE_PIGEONHOLE': 'workspaces/:workspaceId/pigeonholes',

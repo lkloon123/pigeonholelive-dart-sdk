@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "name": "winter theme",
+      "customUrl": "acme-url"
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "perPage": 30,
+    "nextCursor": null,
+    "hasMore": false
+  }
+}
