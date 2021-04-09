@@ -26,9 +26,9 @@ class NumericScale extends PollQuestion implements CastableToJson {
     this.lowestLabel,
     this.highestLabel,
   }) : super(
-    question: question,
-    type: type,
-  );
+          question: question,
+          type: type,
+        );
 
   factory NumericScale.fromJson(Map<String, dynamic> json) =>
       _$NumericScaleFromJson(json);

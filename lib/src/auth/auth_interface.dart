@@ -6,7 +6,6 @@ enum AuthType {
   empty,
 }
 
-
 abstract class AuthInterface {
   AuthType authType();
 

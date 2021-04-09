@@ -6,7 +6,6 @@ import 'package:pigeonholelive_sdk/src/models/castable_to_json.dart';
 part 'profile_field.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-
 class ProfileField implements CastableToJson {
   String? name;
   bool? required;

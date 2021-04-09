@@ -12,7 +12,8 @@ import 'package:pigeonholelive_sdk/src/models/errors/validation_errors.dart';
 import 'package:pigeonholelive_sdk/src/service_provider/service_provider_manager.dart';
 
 class InternalInterceptor extends Interceptor {
-  AuthInterface get auth => ServiceProviderManager.instance.getIt.get<AuthInterface>();
+  AuthInterface get auth =>
+      ServiceProviderManager.instance.getIt.get<AuthInterface>();
 
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {

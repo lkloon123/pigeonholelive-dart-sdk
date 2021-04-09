@@ -20,7 +20,8 @@ class WorkspaceImpl extends Module implements WorkspaceModuleInterface {
       ServiceProviderManager.instance.getIt.get<AuthInterface>();
 
   @override
-  Future<PaginationResult<Workspace>> list({PaginationMeta? paginationMeta}) async {
+  Future<PaginationResult<Workspace>> list(
+      {PaginationMeta? paginationMeta}) async {
     throwIfWorkspaceToken();
 
     var uri = ApiUrl.get(ApiUrlKey.LIST_WORKSPACE);

@@ -19,8 +19,8 @@ class RegistrantForm implements CastableToJson {
 
   factory RegistrantForm.fromJson(Map<String, dynamic> json) {
     var registrant = _$RegistrantFormFromJson(json);
-    registrant.customProfileField = CustomProfileField.fromJson(json
-      ..removeWhere((key, value) => key == 'attendeeCode'));
+    registrant.customProfileField = CustomProfileField.fromJson(
+        json..removeWhere((key, value) => key == 'attendeeCode'));
     return registrant;
   }
 

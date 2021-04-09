@@ -24,8 +24,7 @@ class Rating extends PollQuestion implements CastableToJson {
           type: type,
         );
 
-  factory Rating.fromJson(Map<String, dynamic> json) =>
-      _$RatingFromJson(json);
+  factory Rating.fromJson(Map<String, dynamic> json) => _$RatingFromJson(json);
 
   @override
   Map<String, dynamic> toJson() => _$RatingToJson(this);

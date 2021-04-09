@@ -12,11 +12,7 @@ class Insight implements CastableToJson {
   String? content;
   List<PollOptionInsight>? options;
 
-  Insight({
-    this.questionId,
-    this.content,
-    this.options
-  });
+  Insight({this.questionId, this.content, this.options});
 
   factory Insight.fromJson(Map<String, dynamic> json) =>
       _$InsightFromJson(json);
